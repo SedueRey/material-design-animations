@@ -1,0 +1,11 @@
+/* MAIN */
+  Developer: Eduardo Rey Jara
+  Twitter: @jsphp_senior
+  Site: http://www.seduerey.com
+
+/* SITE */
+  Doctype: HTML5
+  IDE: Sublime Text
+
+/* SPECIAL THANKS */
+ all humanstxt.org team!
