@@ -173,6 +173,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+@-webkit-keyframes blurry {
+  /* line 94, ../sass/_animations.scss */
+  0% {
+    left: 0;
+    width: 100%;
+    bottom: 50%;
+    height: 150%;
+    -webkit-filter: blur(250px);
+    -moz-filter: blur(250px);
+    filter: blur(250px);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
+  /* line 102, ../sass/_animations.scss */
+  100% {
+    top: 0;
+    left: 250px;
+    height: 100%;
+    width: calc(100% - 250px );
+    overflow: auto;
+    background: rgba(255, 143, 0, 0.95);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 /* line 9, ../sass/screen.scss */
 body {
   color: #212121;
@@ -608,6 +644,71 @@ article.main {
   color: #F0F0F0;
 }
 /* line 283, ../sass/screen.scss */
+.button_container.rounded_blurry {
+  background: #37474f;
+  left: 210px;
+  bottom: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 288, ../sass/screen.scss */
+.button_container.rounded_blurry:hover {
+  left: 205px;
+  bottom: 40px;
+}
+/* line 292, ../sass/screen.scss */
+.button_container.rounded_blurry.active {
+  background: #FF8F00;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-name: blurry;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.3s;
+  -moz-animation-name: blurry;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.3s;
+  -o-animation-name: blurry;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+  animation-name: blurry;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 296, ../sass/screen.scss */
+.button_container.rounded_blurry.active .inner {
+  text-align: left;
+}
+/* line 298, ../sass/screen.scss */
+.button_container.rounded_blurry.active .inner .icon {
+  display: none;
+}
+/* line 301, ../sass/screen.scss */
+.button_container.rounded_blurry.active .inner content {
+  display: block;
+  padding: 1rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #212121;
+}
+/* line 309, ../sass/screen.scss */
+.button_container.rounded_blurry.active .inner content h1 {
+  color: #F0F0F0;
+}
+/* line 316, ../sass/screen.scss */
 .button_container:hover {
   width: 50px;
   height: 50px;
@@ -616,7 +717,7 @@ article.main {
   -moz-box-shadow: rgba(70, 70, 70, 0.75) 0px 0px 8px;
   box-shadow: rgba(70, 70, 70, 0.75) 0px 0px 8px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .button_container:hover .icon {
   width: 50px;
   height: 26px;

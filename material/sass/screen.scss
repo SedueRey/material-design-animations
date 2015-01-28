@@ -280,6 +280,39 @@ article.main{
 			}
 		}
 	}
+	&.rounded_blurry{
+		background: rgba(55,71,79 ,1);
+		left:   210px;
+		bottom: 50px;
+		@include box-sizing( 'border-box' );
+		&:hover{
+			left:   205px;
+			bottom: 40px;
+		}
+		&.active{
+			background: #FF8F00;
+			@include animation(0s, 0.3s, blurry);
+			@include border-radius( 0px );
+			.inner{
+				text-align: left;
+				.icon{
+					display: none;
+				}
+				content{
+					display: block;
+					padding: 1rem;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					color: #212121;
+					h1{
+						color: #F0F0F0;
+					}
+				}
+			}
+		}
+	}
 	&:hover{
 		width: 50px;
 		height: 50px;
